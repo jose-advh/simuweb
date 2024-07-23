@@ -16,25 +16,59 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
 }
+
+header {
+    background-color: rgba(255, 255, 255, 0.13);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; 
+    transition: background-color 0.3s ease; 
+}
+
+.header-hidden {
+    background-color: rgba(255, 255, 255, 0.493); 
+}
+
 .principal {
     position: relative;
     overflow: hidden; 
+    position: fixed;
 }
-body::before {
+
+.principal__li__aprender {
+    background-color: #0092ce;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.principal__li__aprender:hover {
+    transition: 1.1s;
+    background-color: #00aeff;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.main__principal::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
+    filter: blur(5px);
+    z-index: -1; 
     width: 100%;
     height: 100vh;
     background: url('../media/backgrounds/backmainblur.png') center center;
-    filter: blur(5px);
-    z-index: -1; 
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
 .navegacion {
-    background-color: rgba(255, 255, 255, 0.290);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -43,6 +77,7 @@ body::before {
     padding: 0px 10px;
     font-family: "Krona One", sans-serif;
     font-size: 13px;
+    z-index: 1;
 }
 
 .navegacion__logo {
@@ -68,25 +103,32 @@ body::before {
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 2px;
-    color: gray;
+    color: rgb(0, 71, 224);
 }
 
 .navegacion__iniciar {
-    background-color: #15c0f9;
+    border: 1px solid;
+    border-color: blue;
     border-radius: 5px;
     padding: 10px;   
 }
 
 .navegacion__iniciar:hover {
-    transition: 1.2s;
+    transition: 1.1s;
     background-color: gray;
+    border: none;
+    border-radius: 0;
 }
 
 .social_media {
     display: flex;
     justify-content: center;
-    padding: 20px 0px;
+    padding: 1px 0px;
     gap: 5px;
+}
+
+.social_media  {
+    margin-top: 70px;
 }
 
 .social_media img {
@@ -94,7 +136,7 @@ body::before {
     border-radius: 5px;
     margin: 8px;
     width: 20px;
-    padding: 10px 10px;
+    padding: 10px;
 }
 
 .faceboock:hover,
@@ -127,8 +169,6 @@ body::before {
 main {
     font-family: "Krona One", sans-serif;
     position: relative;
-    z-index: 1;
-    padding: 40px;
     color: #fff;
 }
 
@@ -137,6 +177,7 @@ main {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    padding: 30px;
 }
 
 .main__info__simuh1 {
@@ -176,7 +217,80 @@ main {
     background-color: gray;
 }
 
-.main__segundo {
-    background-color: #06334b;
+.main__info__unete {
+    padding: 15px;
 }
+
+.main__segundo {
+    width: 100%;
+    height: 100vh; 
+    color: white; 
+    text-align: center; 
+    z-index: 0; 
+    background-color: rgb(240, 255, 254);
+}
+
+.main__segundo_arrow {
+    width: 50px;
+    padding: 20px;
+}
+
+.main__segundo__h3 {
+    padding: 50px 10px;
+}
+
+.grid {
+    background: hsl(36, 100%, 99%);
+    width: 90%;
+    max-width: 800;
+    height: 500px;
+    display: grid;
+    gap: 1.2vw;
+    padding: 1vw;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "hero hero hero hero aside2 aside2"
+      "hero hero hero hero aside2 aside2"
+      "hero hero hero hero aside2 aside2"
+      "hero hero hero hero aside2 aside2"
+      "aside3 aside3 aside4 aside4 aside5 aside5 ";
+  }
+
+  .item {
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid;
+  }
+  
+  .grid .item:nth-child(1) {
+    grid-area: hero;
+    background-color: rgba(128, 128, 128, 0.253);
+  }
+
+  .item__simulogo {
+    width: 50px;
+  }
+
+  .main__segundo__slogan {
+    padding: 10px 10px;
+    font-size: 16px;
+  }
+
+  .grid .item:nth-child(2) {
+    grid-area: aside2;
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 21%, rgba(181,5,183,1) 47%);
+  }
+
+  .grid .item:nth-child(3) {
+    grid-area: aside3;
+  }
+  .grid .item:nth-child(4) {
+    grid-area: aside4;
+  }
+  
+  .grid .item:nth-child(5) {
+    grid-area: aside5;
+  }
 

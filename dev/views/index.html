@@ -8,37 +8,61 @@
     <title>Simu!</title>
 </head>
 <body>
- <header>
-    <article class="principal">
+    <header>
         <nav class="navegacion">
-            <img  class="navegacion__logo" src="../media/logos/simulogo.png" alt="logo simu web">
+            <img class="navegacion__logo" src="../media/logos/simulogo.png" alt="logo simu web">
             <ul class="navegacion__lista">
-                <li><a class="hola" href="#">APRENDER</a></li>
+                <li><a class="principal__li__aprender" href="#">APRENDER</a></li>
                 <li><a href="#">NOSOTROS</a></li>
                 <li><a href="#">NOTICIAS</a></li>
                 <li><a href="#">COMUNIDAD</a></li>
             </ul>
-                <a class="navegacion__iniciar" href="#">INICIAR SESION</a>
+            <a class="navegacion__iniciar" href="../views/login.html"><strong>INICIAR SESION</strong></a>
         </nav>
-    </article>
- </header>
+    </header>
+
     <main>
-        <div class="social_media">
-            <a href="#"><img class="faceboock" src="../media/icons/logo_faceboock.png" alt="logo de faceboock"></a>
-            <a href="#"><img class="instagram" src="../media/icons/logo_instagram.png" alt="logo de instagram"></a>
-            <a href="#"><img class="twitter" src="../media/icons/logo_twitter.png" alt="logo de twitter"></a>
-        </div>
-        <div class="main__info">
-            <h1 class="main__info__simuh1">SOMOS SIMU!</h1>
-            <h2 class="main__info__desch2">¡Domina la prueba Saber 11° con Confianza y Éxito!</h2>
-            <p class="main__info__p">Descubre la manera más efectiva de estudiar y practicar para el examen Saber 11° completamente <strong>GRATIS</strong></p>
-            <a class="main__info__comenzar" href="#">COMENZAR</a>
-        </div>
+        <br>
+        <section class="main__principal">
+            <div class="social_media">
+                <a href="#"><img class="faceboock" src="../media/icons/logo_faceboock.png" alt="logo de faceboock"></a>
+                <a href="#"><img class="instagram" src="../media/icons/logo_instagram.png" alt="logo de instagram"></a>
+                <a href="#"><img class="twitter" src="../media/icons/logo_twitter.png" alt="logo de twitter"></a>
+            </div>
+            <div class="main__info">
+                <h1 class="main__info__simuh1">SOMOS SIMU!</h1>
+                <h2 class="main__info__desch2">¡Refuerza tus conocimientos para la prueba Saber 11°!</h2>
+                <br>
+                <p class="main__info__p">Descubre la manera más efectiva de estudiar y practicar para el examen Saber 11° completamente <strong>GRATIS</strong></p>
+                <br>
+                <a class="main__info__comenzar" href="#">EMPEZAR AHORA</a>
+
+                <br>
+                <img class="main__segundo_arrow" src="../media/icons/arrow-narrow-down.png" alt="">
+                <br>
+            </div>
+
+        </section>
 
         <section class="main__segundo">
-            <h1>Hello World!</h1>
+  
+            <h3 class="main__segundo__h3">BENEFICIOS CLAVE</h3>
+            <article class="flexboards">
+                <div class="grid">
+                    <div class="item"></div>
+                    <div class="item"><h2>NOTICIAS</h2></div>
+                    <div class="item">
+                        <h2 class="main__segundo__slogan">Aprende jugando y diviértete aprendiendo.</h2>
+                        <img class="item__simulogo" src="../media/logos/simulogo.png" alt="">
+                    </div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </article>
         </section>
+        <script src="../js/script.js"></script>
     </main>
+
     <footer></footer>
 </body>
 </html>
