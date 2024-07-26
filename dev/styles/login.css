@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+ 
+}
+
+:root {
+    --fuente-principal: 'Monserrat', sans-serif;
+}
+
+.form {
+    background-color: rgb(207, 206, 206);
+    padding: 5rem 0 0 15rem;
+    font-family: var(--fuente-principal);
+    width: 50%;
+}
+
+.form__login {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+
+}
+
+
+.form__login__usuario,
+.form__login__contra {
+    color: gray;
+    border-radius: 15px;
+    border: none;
+    font-family: var(--fuente-principal);
+    padding: 1rem;
+}
+

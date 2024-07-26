@@ -210,6 +210,9 @@ main {
     transition: background-color 0.3s ease;
     width: auto; 
     margin: 20px auto 0; 
+    -webkit-box-shadow: 2px 10px 10px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 10px 10px -7px rgba(0,0,0,0.75);
+    box-shadow: 2px 10px 10px -7px rgba(0,0,0,0.75);
 }
 
 
@@ -293,4 +296,17 @@ main {
   .grid .item:nth-child(5) {
     grid-area: aside5;
   }
+
+@media (max-width: 696px) {
+    .social_media,
+    .main__info__p,
+    .main__info__desch2,
+    .main__segundo_arrow {
+        display: none;
+    }
+
+    .main__principal {
+        padding: 25px;
+    }
+}
 
