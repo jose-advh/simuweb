@@ -9,5 +9,7 @@
     }
     window.addEventListener('scroll', handleScroll);
 
-
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      }
 
