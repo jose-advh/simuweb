@@ -18,6 +18,7 @@ body {
     flex-direction: column;
     position: relative;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 header {
@@ -239,62 +240,46 @@ main {
 }
 
 .main__segundo__h3 {
-    padding: 50px 10px;
+    padding: 20px 10px;
 }
 
-.grid {
-    background: hsl(36, 100%, 99%);
-    width: 90%;
-    max-width: 800;
-    height: 500px;
+.bento {
+    min-block-size: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1ch;
+    padding: 1ch;
+  }
+  
+  .bento__container {
     display: grid;
-    gap: 1.2vw;
-    padding: 1vw;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      "hero hero hero hero aside2 aside2"
-      "hero hero hero hero aside2 aside2"
-      "hero hero hero hero aside2 aside2"
-      "hero hero hero hero aside2 aside2"
-      "aside3 aside3 aside4 aside4 aside5 aside5 ";
-  }
-
-  .item {
-    padding: 10px;
-    border-radius: 25px;
-    border: 1px solid;
+    grid-template-rows: 3fr 1fr 1fr 2fr 2fr 3fr;
+    gap: 1ch;
+    min-height: inherit;
+    flex: 2 0 320px;
   }
   
-  .grid .item:nth-child(1) {
-    grid-area: hero;
-    background-color: rgba(128, 128, 128, 0.253);
-  }
-
-  .item__simulogo {
-    width: 50px;
-  }
-
-  .main__segundo__slogan {
-    padding: 10px 10px;
-    font-size: 16px;
-  }
-
-  .grid .item:nth-child(2) {
-    grid-area: aside2;
-    background: rgb(0,212,255);
-    background: linear-gradient(90deg, rgba(0,212,255,1) 21%, rgba(181,5,183,1) 47%);
-  }
-
-  .grid .item:nth-child(3) {
-    grid-area: aside3;
-  }
-  .grid .item:nth-child(4) {
-    grid-area: aside4;
+  .bento__container[variant-1] {
+    --bg: #837AED;
+    grid-template-columns: 3fr 1fr 2fr;
   }
   
-  .grid .item:nth-child(5) {
-    grid-area: aside5;
+  .bento__container[variant-2] {
+    --bg: #F272AC;
+    grid-template-columns: 2fr 3fr 1fr 2fr;
+  }
+  
+  .bento__container[variant-3] {
+    --bg: #72F286;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .bento__item {
+    height: 100%; width: 100%;
+    grid-column: var(--columns, span 1);
+    grid-row: var(--rows, span 1);
+    background-color: var(--bg);
+    border-radius: 1rem;
   }
 
 @media (max-width: 696px) {
